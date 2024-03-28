@@ -50,6 +50,9 @@ function displayMenuItems(menu) {
     }
 }
 
+// Variable to store the total order price
+let total = 0;
+
 // Callback function for adding an item to the order
 function addToOrder(itemName, itemPrice) {
     // Get the order items list and the order total element from the HTML
@@ -62,8 +65,8 @@ function addToOrder(itemName, itemPrice) {
     // Append the list item to the order items list
     orderItemsElement.appendChild(orderListItemElement)
     // Calculate and update the total price
-   
-    // Update the text content of the order total element with the new total
+    total += itemPrice;
+    orderTotalElement.textContent = `${total.toFixed(2)}`;
 }
 
 // Function to initialize the menu system
