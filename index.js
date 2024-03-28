@@ -38,11 +38,11 @@ function displayMenuItems(menu) {
             // Create a list item element
             const menuItemElement = document.createElement('li');
             // Set the text content of the list item element to the item name and price
-            menuItemElement.textContent = `${menuItem.name}`;
+            menuItemElement.textContent = `${menuItem.name} - R${menuItem.price}`;
             // Attach a click event listener to the list item to add it to the order
             menuItemElement.addEventListener('click', (event) => {
-                console.log(`${menuItem.name} added to the order...`);
-                addToOrder(menuItem.name, menuItem.price); // Pass the clicked item to addToOrder function
+                console.log(`${menuItem.name} added to the order.`);
+                addToOrder(menuItem.name, menuItem.price); // Passes clicked item to addToOrder function
             });
             // Append the list item to the list of items
             categoryItemListElement.appendChild(menuItemElement);
