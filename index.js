@@ -10,8 +10,19 @@ const menu = {
     // Get the menu container element from the HTML
     const menuDiv = document.getElementById('menu');
     // Loop through each category and its items in the menu object
-    
+    for (let order of menu) {
+       // Create an element to represent the category
+        const orderElement = document.createElement('div')
         // Set the text content of the category element to the category name
+        orderElement.textContent = order;
+        // Append the category element to the menu container
+        menuDiv.appendChild(orderElement);
+        // Create an element to represent a list of items
+  
+        // Append a list of items element to the menu container
+  
+    }       
+    // Set the text content of the category element to the category name
   
         // Append the category element to the menu container
   
