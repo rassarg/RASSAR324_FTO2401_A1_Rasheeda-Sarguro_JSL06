@@ -32,16 +32,30 @@ const menu = {
         // Append a list of items element to the menu container
         menuDiv.appendChild(itemListElement);
 
-        
+        // Loop through the items in the category and create list items
+        items.forEach(item => {
+            // Create a list item element
+            const listItemElement = document.createElement('li');
+            // Set the text content of the list item element to the item name and price
+            listItemElement.textContent = `${item.name} - $${item.price}`;
+            // Attach a click event listener to the list item to add it to the order
+            listItemElement.addEventListener('click', () => {
+                console.log(`${item.name} added to the order...`);
+                // You can add your order logic here
+            });
+            // Append the list item to the list of items
+            itemListElement.appendChild(listItemElement);
+        });
     }
 }
   
   // Callback function for adding an item to the order
   function addToOrder(itemName) {
     // Get the order items list and the order total element from the HTML
-  
+    const orderItemsElement = document.getElementById('order-items');
+    const orderTotalElement = document.getElementById('order-total');
     // Create a list item for the order
-  
+    const orderListItemElement = document.createElement('li');
     // Set the text content of the list item to the item name
   
     // Append the list item to the order items list
