@@ -10,7 +10,7 @@ function displayMenuItems(menu) {
     // HINT: Get a reference to the menu container in your HTML
     
     // HINT: Loop through each category and its items in the menu object
-    for (const [category, items] of Object.entries()) {
+    for (const [category, items] of Object.entries(menu)) {
         // HINT: Create an h3 element for the category
         
         // HINT: Append the category heading to the menu container

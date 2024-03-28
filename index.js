@@ -19,39 +19,22 @@ const menu = {
     // Get the menu container element from the HTML
     const menuDiv = document.getElementById('menu');
     // Loop through each category and its items in the menu object
-    for (let order in menu) {
-       // Create an element to represent the category
-        const orderElement = document.createElement('div')
+    for (const [category, items] of Object.entries(menu)) {
+        // Create an element to represent the category
+        const categoryElement = document.createElement('div');
         // Set the text content of the category element to the category name
-        orderElement.textContent = order;
+        categoryElement.textContent = category;
         // Append the category element to the menu container
-        menuDiv.appendChild(orderElement);
+        menuDiv.appendChild(categoryElement);
+
         // Create an element to represent a list of items
-        const item = document.createElement('ul');
+        const itemListElement = document.createElement('ul');
         // Append a list of items element to the menu container
-        menuDiv.appendChild()
-  
-    }       
-    // Set the text content of the category element to the category name
-  
-        // Append the category element to the menu container
-  
-        // Create an element to represent a list of items
-  
-        // Append a list of items element to the menu container
-  
-        // Loop through the items in the category and create list items
-  
-            // Create a list item element
-  
-            // Set the text content of the list item element to the item name
-  
-            // Attach a click event listener to the list item to add it to the order
-  
-            // Append the list item to the list of items
-  
-            
-  }
+        menuDiv.appendChild(itemListElement);
+
+        
+    }
+}
   
   // Callback function for adding an item to the order
   function addToOrder(itemName) {
