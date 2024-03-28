@@ -38,7 +38,7 @@ function displayMenuItems(menu) {
             // Create a list item element
             const listItemElement = document.createElement('li');
             // Set the text content of the list item element to the item name and price
-            listItemElement.textContent = `${item.name} - $${item.price}`;
+            listItemElement.textContent = `${item.name} - R${item.price}`;
             // Attach a click event listener to the list item to add it to the order
             listItemElement.addEventListener('click', (event) => {
                 console.log(`${item.name} added to the order...`);
@@ -61,7 +61,7 @@ function addToOrder(itemName, itemPrice) {
     // Create a list item for the order
     const orderListItemElement = document.createElement('li');
     // Set the text content of the list item to the item name
-    orderListItemElement.textContent = `${itemName} - $${itemPrice}`;
+    orderListItemElement.textContent = `${itemName} - R${itemPrice}`;
     // Append the list item to the order items list
     orderItemsElement.appendChild(orderListItemElement)
     // Calculate and update the total price
