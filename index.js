@@ -57,7 +57,7 @@ const menu = {
     // Create a list item for the order
     const orderListItemElement = document.createElement('li');
     // Set the text content of the list item to the item name
-  
+    orderListItemElement.textContent = 'item name';
     // Append the list item to the order items list
   
     // Calculate and update the total price
