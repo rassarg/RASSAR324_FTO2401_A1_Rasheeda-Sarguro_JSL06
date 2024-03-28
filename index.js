@@ -71,10 +71,10 @@ function addToOrder(itemName, itemPrice) {
 }
 
 // Function to initialize the menu system
-function initMenuSystem(menu) {
+const initMenuSystem = function(menu) {
     // Call the function to display menu items
     displayMenuItems(menu);
-}
+};
 
 // Start the menu system by calling the init function
 initMenuSystem(menu);
