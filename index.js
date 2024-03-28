@@ -1,8 +1,17 @@
 // Sample menu data (Consider fetching this data from a server in a real-world scenario)
 const menu = {
-    Starters: ["Garlic Bread", "Bruschetta"],
-    MainCourses: ["Margherita Pizza", "Spaghetti Carbonara"],
-    Desserts: ["Tiramisu", "Cheesecake"]
+    Starters: [
+        {name: "Garlic Bread", price: 100},
+        {name: "Bruschetta", price: 150}
+    ],    
+    MainCourses: [
+        {name: "Margherita Pizza", price: 80}, 
+        {name: "Spaghetti Carbonara", price: 95}
+    ],
+    Desserts: [
+        {name: "Tiramisu", price: 120},
+        {name: "Cheesecake", price: 65}
+    ]
   };
   
   // Function to display menu items by category
@@ -18,8 +27,9 @@ const menu = {
         // Append the category element to the menu container
         menuDiv.appendChild(orderElement);
         // Create an element to represent a list of items
-  
+        const item = document.createElement('ul');
         // Append a list of items element to the menu container
+        menuDiv.appendChild()
   
     }       
     // Set the text content of the category element to the category name
