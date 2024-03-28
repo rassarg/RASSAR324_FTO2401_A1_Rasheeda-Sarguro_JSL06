@@ -41,7 +41,7 @@ function displayMenuItems(menu) {
             menuItemElement.textContent = `${menuItem.name} - R${menuItem.price}`;
             // Attach a click event listener to the list item to add it to the order
             menuItemElement.addEventListener('click', (event) => {
-                console.log(`${menuItem.name} added to the order.`);
+                console.log(`${menuItem.name} (R${menuItem.price}) added to the order.`);  // added in addition to display current order list and total in console
                 addToOrder(menuItem.name, menuItem.price); // Passes clicked item to addToOrder function
             });
             // Append the list item to the list of items
@@ -67,6 +67,7 @@ function addToOrder(itemName, itemPrice) {
     // Calculate and update the total price
     total += itemPrice;
     orderTotalElement.textContent = `${total.toFixed(2)}`;
+    console.log(`Current order total: R${total}`);
 }
 
 // Function to initialize the menu system
