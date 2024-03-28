@@ -60,7 +60,9 @@ function addToOrder(itemName, itemPrice) {
     // Set the text content of the list item to the item name
     orderListItemElement.textContent = `${itemName} - $${itemPrice}`;
     // Append the list item to the order items list
-    
+    orderItemsElement.appendChild(orderListItemElement)
+    // Calculate and update the total price
+   
     // Update the text content of the order total element with the new total
 }
 
