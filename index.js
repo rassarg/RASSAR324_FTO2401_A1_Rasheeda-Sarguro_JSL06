@@ -17,35 +17,35 @@ const menu = {
 // Function to display menu items by category
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
-    const menuElement = document.getElementById('menu');
+    const menuContainerElement = document.getElementById('menu');
     // Loop through each category and its items in the menu object
     for (const [category, items] of Object.entries(menu)) {
         // Create an element to represent the category
-        const categoryElement = document.createElement('h3');
+        const categoryHeaderElement = document.createElement('h3');
         // Set the text content of the category element to the category name
-        categoryElement.textContent = category;
+        categoryHeaderElement.textContent = category;
         // Append the category element to the menu container
-        menuElement.appendChild(categoryElement);
+        menuContainerElement.appendChild(categoryHeaderElement);
 
         // Create an element to represent a list of items
-        const itemListElement = document.createElement('ul');
+        const categoryItemListElement = document.createElement('ul');
         // Append a list of items element to the menu container
-        menuElement.appendChild(itemListElement);
+        menuContainerElement.appendChild(categoryItemListElement);
 
-        // Loop through the items in the category and create list items
+        // Loops through the items in the category and creates list items
         for (let i = 0; i < items.length; i++) {
-            const item = items[i];
+            const menuItem = items[i];
             // Create a list item element
-            const listItemElement = document.createElement('li');
+            const menuItemElement = document.createElement('li');
             // Set the text content of the list item element to the item name and price
-            listItemElement.textContent = `${item.name}`;
+            menuItemElement.textContent = `${menuItem.name}`;
             // Attach a click event listener to the list item to add it to the order
-            listItemElement.addEventListener('click', (event) => {
-                console.log(`${item.name} added to the order...`);
-                addToOrder(item.name, item.price); // Pass the clicked item to addToOrder function
+            menuItemElement.addEventListener('click', (event) => {
+                console.log(`${menuItem.name} added to the order...`);
+                addToOrder(menuItem.name, menuItem.price); // Pass the clicked item to addToOrder function
             });
             // Append the list item to the list of items
-            itemListElement.appendChild(listItemElement);
+            categoryItemListElement.appendChild(menuItemElement);
         }
     }
 }
