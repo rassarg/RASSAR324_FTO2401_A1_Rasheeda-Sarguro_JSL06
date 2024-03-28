@@ -42,7 +42,7 @@ function displayMenuItems(menu) {
             // Attach a click event listener to the list item to add it to the order
             menuItemElement.addEventListener('click', (event) => {   // anonymous function
                 console.log(`${menuItem.name} (R${menuItem.price}) added to the order.`);  // added in addition to display current order list and total in console
-                addToOrder(menuItem.name, menuItem.price); // Passes clicked item to addToOrder function
+                addToOrder(menuItem.name, menuItem.price); // Passes clicked item to addToOrder function, also example of closure as it pulls menuItem.name & menuItem.price from out of scope.
             });
             // Append the list item to the list of items
             categoryItemListElement.appendChild(menuItemElement);
