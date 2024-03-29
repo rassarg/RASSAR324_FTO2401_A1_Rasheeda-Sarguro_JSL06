@@ -66,7 +66,7 @@ function addToOrder(itemName, itemPrice) {
     orderItemsElement.appendChild(orderListItemElement)
     // Calculate and update the total price
     total += itemPrice;
-    orderTotalElement.textContent = `${total.toFixed(2)}`;
+    orderTotalElement.textContent = `${total}`; // initially added .toFixed(2) to reduce decimal points to 2, but not needed based on prices
     console.log(`Current order total: R${total}`);
 }
 
